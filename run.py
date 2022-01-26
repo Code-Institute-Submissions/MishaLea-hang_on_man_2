@@ -1,8 +1,12 @@
+"""
+Randomm library imported for word choosing random
+word from below list by random.
+"""
 import random
 
 words = ['tree', 'sun', 'ball', 'moon', 'earth', 'grass', 'world',
-        'advert', 'octodont', 'pharos', 'physics', 'reality',
-        'possession', 'cousin', 'aspect', 'analyst']  
+         'advert', 'octodont', 'pharos', 'physics', 'reality',
+         'possession', 'cousin', 'aspect', 'analyst']
 
 word = random.choice(words)
 
@@ -13,8 +17,10 @@ while True:
     # Build the current guessed word
     currentGuessedWord = ""
     for character in word:
-        if character in guessedLetters: currentGuessedWord += character
-        else: currentGuessedWord += " _ "    
+        if character in guessedLetters:
+            currentGuessedWord += character
+        else:
+            currentGuessedWord += " _ "
     print()
     print(currentGuessedWord)
     print()

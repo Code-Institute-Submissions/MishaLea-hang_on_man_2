@@ -32,8 +32,42 @@ while True:
         print("Well done, you've guessed the word!")
 
     # Check if the player has lost the game
-    if incorrectGuesses >= 6:
+    if incorrectGuesses == 1:
+        print("5 turns left")
+        print("-----------------")
+        print("         0       ")
+    if incorrectGuesses == 2:
+        print("4 turns left")
+        print("-----------------")
+        print("         0       ")
+        print("         |       ")
+    if incorrectGuesses == 3:
+        print("3 turns left")
+        print("-----------------")
+        print("         0       ")
+        print("         |       ")
+        print("        / \      ")
+    if incorrectGuesses == 4:
+        print("2 turns left")
+        print("-----------------")
+        print("       \ 0 /     ")
+        print("         |       ")
+        print("        / \      ")
+    if incorrectGuesses == 5:
+        print("Only 1 turn left!")
+        print("-----------------")
+        print("         |       ")
+        print("       \ 0 /     ")
+        print("         |       ")
+        print("        / \      ")
+    if incorrectGuesses == 6:
         print(f"You DIE! The word was {word} :D")
+        print("-----------------")
+        print("        _|_      ")
+        print("         |       ")
+        print("       \ 0 /     ")
+        print("         |       ")
+        print("        / \      ")
         break
 
     # Ask the user to guess a letter

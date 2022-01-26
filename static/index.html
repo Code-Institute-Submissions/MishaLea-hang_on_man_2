@@ -16,6 +16,7 @@
 <body>
     <button onclick="window.location.reload()">Run Program</button>
     <div id="terminal"></div>
+    <div id="title">Hang on, Man!</div>
     <script>
         var socket = null;
         var term = null;
@@ -65,7 +66,6 @@
                 term.writeln('Running your file: run.py');
                 term.writeln('');
                 term_prompt(term);
-
                 term.onData(e => {
                     switch (e) {
                         case '\r': // Enter
@@ -89,6 +89,7 @@
 
             runFakeTerminal();
         }
+
 
         document.addEventListener("DOMContentLoaded", function () {
             init_socket();

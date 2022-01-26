@@ -13,6 +13,10 @@ word = random.choice(words)
 incorrectGuesses = 0
 guessedLetters = []
 
+print("Hang on, Man!")
+print("You have 6 attempts! Good luck")
+input("Enter name to start: ")
+
 while True:
     # Build the current guessed word
     currentGuessedWord = ""

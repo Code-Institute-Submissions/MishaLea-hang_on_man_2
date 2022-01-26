@@ -1,45 +1,78 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+*Hang on Man*
 
-Welcome MishaLea,
+# Purpose
+Hang on, Man Is a command line game based on the original HangMan letter game.
+The computer will generate a random set of words and the user has to guess the 
+correct word/letters with a limited amount of tries for each word. 
+ 
+The game itself will have a set of words pre-installed that will generate one 
+randomly for the user to guess correctly with the allotted amount of tries for each word. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+They will be random words, with no theme or genre.
+Each word will have a maximum of 6 attempts to get the word right and for sake of
+difficulty, will include longer words in my set of random words that will be generated 
+on each round. If the user gets it right, he/she wins that round. If the user loses, 
+it will inform the user they lost the round. 
 
-## Gitpod Reminders
+## Initial concept/Ideas: 
+The UI will be simple but for each round, a piece/section of graphic will be added 
+depending on the guess being wrong. This will signal to the user their chances are 
+nearing the end if they guess more wrong answers. If they are lucky and manage to 
+guess the letters/word before their turn is up, the hangman will not be completed. 
+***I would like to include a basic graphic design if the player wins the round - 
+I am yet to create this so still in concept stage currently.  
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## User Stories
 
-`python3 -m http.server`
+As a User
+-	The game needs to be easy to understand and fun to play. 
 
-A blue button should appear to click: *Make Public*,
+To create this I intend on keeping content/words brief
+. 
+-	The rules need to be clear with the number of tries showing after each letter is guessed. 
+-	An option to play again after each word is guessed right/wrong
+-	After a set number of words has been guessed right/wrong, the results showing 
+final wins/losses would be interesting to see. 
+## Features to include: 
+-	Graphics of hangman if user gets a guess wrong during each round. 
+-	Hint if down to 4/5 attempts that’s only available by swapping a life for a hint. 
+-	Computer informs user each time they guess right or wrong. If correct, the letter will be added. 
+If wrong, a section of hangman to be shown. 
+-	User should enter name to start and before initial guess, computer will welcome the user to the game. 
+At end of round, computer will have a congrats message or a condolences messages with an option to play again. 
 
-Another blue button should appear to click: *Open Browser*.
+Graphics included: 
+As previously discussed, a simple hangman design will be added each time a letter is guessed incorrectly – 
+this has been added directly into the python code through an if/else statement based on the number of turns taken. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Each round will show ‘_’ underscores based on how many letters are in the randomly chosen word. When a letter is 
+guessed correctly, this will be added in the correct space.  
 
-A blue button should appear to click: *Make Public*,
 
-Another blue button should appear to click: *Open Browser*.
+Correct input and validation: 
+To make sure the user inputs valid characters IE a,b,c,d etc… , the code will include instructions 
+if an invalid answer is submitted, advising the user to only use valid letters. This will not affect 
+the chances left – only when a valid letter has been submitted wrongly, will the number of guesses decrease.
+Similarly, if the user inouts a letter more than once, the computer will generate a message advising the 
+letter has already been guessed.  
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Solved errors and bugs/errors unresolved: 
 
-## Updates Since The Instructional Video
+There were several minor errors including whitespaces, extra lines and an error message detailing 
+the variable was not entered correctly using UPPERCASE characters. 
+All errors were fixed except for in the Gitpod.yml
+(image)
+I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+PIP8 was used and confirmed all was correct with the code. 
+(image) 
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+References/ Acknowledgements:
+ 
+-	https://www.randomlists.com/data/words.json - used to collect a group of random words
+-	import random was added to run.py to randomly select from the chosen list of words. 
+-	Youtube videos (devjunkie) helped clarify certain sections of the code I was not familiar with. Such as the graphics for the hangman. 
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!

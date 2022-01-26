@@ -14,8 +14,8 @@ incorrectGuesses = 0
 guessedLetters = []
 
 print("Hang on, Man!")
-print("You have 6 attempts! Good luck")
 input("Enter name to start: ")
+print("You have 6 attempts! Good luck")
 
 while True:
     # Build the current guessed word
@@ -32,7 +32,6 @@ while True:
     # Check if the user has already guessed all the letters
     if currentGuessedWord == word:
         print("Well done, you've guessed the word!")
-        input("Press 'P' to play again!")
 
     # Check if the player has lost the game
     if incorrectGuesses >= 6:

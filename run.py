@@ -63,7 +63,7 @@ while True:
         print("        / \      ")
     if incorrectGuesses == 6:
         print(f"You DIE! The word was {word} :D")
-        print("-----------------")
+        print("------------------")
         print("        _|_      ")
         print("         |       ")
         print("       \ 0 /     ")
@@ -72,7 +72,7 @@ while True:
         break
 
     # Ask the user to guess a letter
-    letter = input('Guess a letter: ')
+    letter = input('Guess a letter: ')  # should this replace the print statement on line 33 to prevent the repeat on the app?
 
     # Already guessed letters are invalid
     if letter in guessedLetters:

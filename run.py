@@ -32,7 +32,8 @@ while True:
     # Check if the user has already guessed all the letters
     if currentGuessedWord == word:
         print("Well done, you've guessed the word!")
-        break
+        input("Press 'P' to play again!")
+
 
     # Check if the player has lost the game
     if incorrectGuesses >= 6:

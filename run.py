@@ -1,91 +1,143 @@
 """
-Randomm library imported for word choosing random
+Random library imported for word choosing random
 word from below list by random.
 """
 import random
 
-words = ['tree', 'sun', 'ball', 'moon', 'earth', 'grass', 'world',
-         'advert', 'octodont', 'pharos', 'physics', 'reality',
-         'possession', 'cousin', 'aspect', 'analyst']
+WORDBANK = ['tree', 'sun', 'ball', 'moon', 'earth', 'grass', 'world',
+            'advert', 'octodont', 'pharos', 'physics', 'reality',
+            'possession', 'cousin', 'aspect', 'analyst']
 
-word = random.choice(words)
+class Hangman:
+    word = ""
+    incorrect_guesses = 0
+    guessed_letters = []
 
-incorrectGuesses = 0
-guessedLetters = []
+    """
+    Method to start the game.
+    """
+    def start_game(self):
+        print()
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("Hang on, Man!")
+        print("Guess letters to fill out the word--you have 6 attempts!")
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print()
 
-print("Hang on, Man!")
-print("Choose a letter to start - You have 6 attempts")
+        self.word = random.choice(WORDBANK)
 
-while True:
-    # Build the current guessed word
-    currentGuessedWord = ""
-    for character in word:
-        if character in guessedLetters:
-            currentGuessedWord += character
+        while True:
+            # Check if the game has already been lost
+            if self.incorrect_guesses == 6:
+                print(f"You DIE! The word was '{self.word}' :D")
+                break
+
+            # Check if the game has already been won
+            did_win = True
+            for letter in self.word:
+                if letter not in self.guessed_letters:
+                    did_win = False
+                    break
+            if did_win:
+                # The player has won the game!
+                self.display_game_board()
+                print("Well done, you've guessed the word!")
+                break
+
+            # Display board and play the game
+            self.display_hangman()
+            self.display_game_board()
+            self.prompt_user()
+
+    """
+    Method to display the hanging man, representing wrong guesses.
+    """
+    def display_hangman(self):
+        print()
+        print()
+        if self.incorrect_guesses == 0:
+            print("6 wrong guesses left")
+            print("-----------------")
+            return
+        elif self.incorrect_guesses == 1:
+            print("5 wrong guesses left")
+            print("-----------------")
+            print("         0       ")
+        elif self.incorrect_guesses == 2:
+            print("4 wrong guesses left")
+            print("-----------------")
+            print("         0       ")
+            print("         |       ")
+        elif self.incorrect_guesses == 3:
+            print("3 wrong guesses left")
+            print("-----------------")
+            print("         0       ")
+            print("         |       ")
+            print("        / \\      ")
+        elif self.incorrect_guesses == 4:
+            print("2 wrong guesses left")
+            print("-----------------")
+            print("       \\ 0 /     ")
+            print("         |       ")
+            print("        / \\      ")
+        elif self.incorrect_guesses == 5:
+            print("Only 1 wrong guess left!")
+            print("-----------------")
+            print("         |       ")
+            print("       \\ 0 /     ")
+            print("         |       ")
+            print("        / \\      ")
         else:
-            currentGuessedWord += " _ "
-    print()
-    print(currentGuessedWord)
-    print()
+            print("------------------")
+            print("        _|_      ")
+            print("         |       ")
+            print("       \\ 0 /     ")
+            print("         |       ")
+            print("        / \\      ")
+        print()
+        print()
 
-    # Check if the user has already guessed all the letters
-    if currentGuessedWord == word:
-        print("Well done, you've guessed the word!")
+    """
+    Method to display blank spaces and guessed letters.
+    """
+    def display_game_board(self):
+        # Build the current guessed word
+        game_board = ""
+        for character in self.word:
+            if character in self.guessed_letters:
+                game_board += " " + character + " "
+            else:
+                game_board += " _ "
+        print()
+        print(game_board)
+        print()
 
-    # Check if the player has lost the game
-    if incorrectGuesses == 1:
-        print("5 turns left")
-        print("-----------------")
-        print("         0       ")
-    if incorrectGuesses == 2:
-        print("4 turns left")
-        print("-----------------")
-        print("         0       ")
-        print("         |       ")
-    if incorrectGuesses == 3:
-        print("3 turns left")
-        print("-----------------")
-        print("         0       ")
-        print("         |       ")
-        print("        / \      ")
-    if incorrectGuesses == 4:
-        print("2 turns left")
-        print("-----------------")
-        print("       \ 0 /     ")
-        print("         |       ")
-        print("        / \      ")
-    if incorrectGuesses == 5:
-        print("Only 1 turn left!")
-        print("-----------------")
-        print("         |       ")
-        print("       \ 0 /     ")
-        print("         |       ")
-        print("        / \      ")
-    if incorrectGuesses == 6:
-        print(f"You DIE! The word was {word} :D")
-        print("------------------")
-        print("        _|_      ")
-        print("         |       ")
-        print("       \ 0 /     ")
-        print("         |       ")
-        print("        / \      ")
-        break
+    """
+    Method to prompt the user to guess a letter, and process the input.
+    """
+    def prompt_user(self):
+        # Ask the user to guess a letter
+        letter = input('Guess a letter: ')
 
-    # Ask the user to guess a letter
-    letter = input('Guess a letter: ')  # should this replace the print statement on line 33 to prevent the repeat on the app?
+        if len(letter) > 1 or (not letter.isalpha()):
+            print("Invalid input! Try again.")
+            return
 
-    # Already guessed letters are invalid
-    if letter in guessedLetters:
-        print("You've already guessed that letter! Try again.")
-        continue
+        # Already guessed letters are invalid
+        if letter in self.guessed_letters:
+            print("You've already guessed that letter! Try again.")
+            return
 
-    # Add the current guess to the list of guessed letters
-    guessedLetters += letter
+        # Add the current guess to the list of guessed letters
+        self.guessed_letters += letter
 
-    # Check if this is a correct letter
-    if letter in word:
-        print("Congrats! You got a letter.")
-    # If this is not a correct guess, increment incorrect guesses
-    else:
-        print("Unlucky, try again!")
-        incorrectGuesses += 1
+        # Check if this is a correct letter
+        if letter in self.word:
+            print("Congrats! You got a letter.")
+        # If this is not a correct guess, increment incorrect guesses
+        else:
+            self.incorrect_guesses += 1
+            print("Unlucky, try again!")
+
+
+Hangman().start_game()

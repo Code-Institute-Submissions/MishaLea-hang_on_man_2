@@ -1,6 +1,6 @@
-*Hang on Man*
+# Hang on Man
 
-# Purpose
+## Purpose
 Hang on, Man Is a command line game based on the original HangMan letter game.
 The computer will generate a random set of words and the user has to guess the 
 correct word/letters with a limited amount of tries for each word. 
@@ -65,8 +65,7 @@ All errors were fixed except for in the Gitpod.yml
 I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
 
 PIP8 was used and confirmed all was correct with the code. 
-(image) 
-
+![/workspace/hang_on_man_2/PEP8 - Valid.jpg]
 
 
 References/ Acknowledgements:

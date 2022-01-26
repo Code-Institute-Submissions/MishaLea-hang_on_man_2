@@ -15,7 +15,7 @@ guessedLetters = []
 
 print("Hang on, Man!")
 input("Enter name to start: ")
-print("You have 6 attempts! Good luck")
+
 
 while True:
     # Build the current guessed word
@@ -25,6 +25,7 @@ while True:
             currentGuessedWord += character
         else:
             currentGuessedWord += " _ "
+    print("You have 6 attempts! Good luck")
     print()
     print(currentGuessedWord)
     print()

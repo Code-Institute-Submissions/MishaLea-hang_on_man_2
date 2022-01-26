@@ -14,6 +14,7 @@ incorrectGuesses = 0
 guessedLetters = []
 
 print("Hang on, Man!")
+print("Choose a letter to start - You have 6 attempts")
 
 while True:
     # Build the current guessed word

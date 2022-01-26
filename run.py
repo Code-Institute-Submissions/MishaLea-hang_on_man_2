@@ -32,7 +32,7 @@ while True:
 
     # Check if the player has lost the game
     if incorrectGuesses >= 6:
-        print("You DIE! The word was '" + word + "' :D")
+        print(f"You DIE! The word was {word} :D")
         break
 
     # Ask the user to guess a letter

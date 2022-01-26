@@ -34,7 +34,6 @@ while True:
         print("Well done, you've guessed the word!")
         input("Press 'P' to play again!")
 
-
     # Check if the player has lost the game
     if incorrectGuesses >= 6:
         print(f"You DIE! The word was {word} :D")

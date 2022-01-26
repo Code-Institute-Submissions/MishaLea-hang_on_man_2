@@ -35,11 +35,6 @@
  *  Default styles for xterm.js
  */
 
-#title {
-    font-family: Arial;
-    font-size: larger;
-}
-
 .xterm {
     font-feature-settings: "liga"0;
     position: relative;
@@ -79,6 +74,8 @@
     white-space: nowrap;
     overflow: hidden;
     resize: none;
+    font-family: fantasy;
+    font-size: xx-large;
 }
 
 .xterm .composition-view {

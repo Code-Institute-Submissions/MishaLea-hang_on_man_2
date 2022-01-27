@@ -96,6 +96,13 @@ generated for that round.
 
 When the user guesses the word correctly, it will show the word in full and the message of congratulations! 
 
+*Problem
+![Problem](/assets/images/problem.jpg)
+
+For the last hour and half i have had the issue of the iteration working on gitpod but not on heroku. 
+Tutor support confirmed there was no technical issue for their to be an problem with the running of the program on hiroku. 
+So please the correct iteration via gitpod. 
+
 
 
 Correct input and validation: 

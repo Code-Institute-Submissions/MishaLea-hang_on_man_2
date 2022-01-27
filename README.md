@@ -43,6 +43,8 @@ whether win or lose.
 I have spoken to Tutor support and they have confirmed there is no technical reason why it's not working. 
 
 
+
+
 ## Graphics included: 
 As previously discussed, a simple hangman design will be added each time a letter is guessed incorrectly – 
 this has been added directly into the python code through an if/elif/else statement based on the number of turns taken. 

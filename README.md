@@ -36,7 +36,11 @@ final wins/losses would be interesting to see.
 -	Graphics of hangman if user gets a guess wrong during each round. 
 -	Computer informs user each time they guess right or wrong. If correct, the letter will be added. 
 If wrong, a section of hangman to be shown. 
-At end of round, computer will have a congrats message or a condolences messages.
+At end of round, computer will have a congrats message or a condolences messages and a function has been created to iterate a new game
+whether win or lose. 
+
+** id like to clarify that even though it's working perfectly fine on github, for some reason it's not working on heroku. 
+I have spoken to Tutor support and they have confirmed there is no technical reason why it's not working. 
 
 
 ## Graphics included: 

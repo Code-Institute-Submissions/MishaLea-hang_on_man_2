@@ -20,7 +20,6 @@ class Hangman:
 
     print('Hello, to start press any key')
     username = input("Enter your name to start: ")
-    print(f"Username is: {input}")
 
     def start_game(self):
         """

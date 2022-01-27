@@ -153,7 +153,7 @@ def main():
     Hangman().start_game()
 
     restart = input("Enter 'Y' if you'd like to play again.")
-    if restart == "y" or "Y":
+    if restart == 'y' or 'Y':
         main()
     else:
         exit()

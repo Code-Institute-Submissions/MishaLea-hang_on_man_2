@@ -119,12 +119,14 @@ class Hangman:
         print(game_board)
         print()
 
+    """
     def prompt_user(self):
         # Ask the user to guess a letter
         """
-        Method to prompt the user to guess a letter, and process the input.
+        # Method to prompt the user to guess a letter, and process the input.
         """
         letter = input('Guess a letter: ')
+    """
 
         if len(letter) > 1 or (not letter.isalpha()):
             print("Invalid input! Try again.")

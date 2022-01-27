@@ -55,20 +55,41 @@ the game and how many lives they have in total. Followed
 *Correctanswer
 ![Correctanswer](/assets/images/Correctanswer.jpg)
 
+The above image shows the user when a letter has been guessed correctly. 'Congrats! You got a letter. 
+And any guesses remaining show along with the sections of hangman 
+also used. 
+
 *IncorrectGuess
 ![IncorrectGuess](/assets/images/IncorrectGuess.jpg)
+
+If the user gets a letter wrong, the computer informs them with 
+'Unlucky, try again!' followed by the number of guesses remaining
+and the section of hangman added. 
 
 *Letterguessedalready
 ![Letterguessedalready](/assets/images/Letterguessedalready.jpg)
 
+If the user guessed a letter that has already been entered on the same round, no lives are lost, 
+however the computer will advise them that 'You've already guessed that letter! Try again'
+
 *invalidinput
 ![invalidinput](/assets/images/invalidinput.jpg)
+
+If a user inputs anything other than a letter from the alphabet, they will be advised 
+'Invalid input! Try again' Again. no lives are taken at this stage. 
 
 *roundlost
 ![roundlost](/assets/images/roundlost.jpg)
 
+If all lives have been used and the word was not guessed, the hangman image will show 
+in commpletion along with the message 'Unlucky, try again! Along with the word that was randomly 
+generated for that round. 
+
 *WordGuessedCorrectly
 ![WordGuessedCorrectly](/assets/images/WordGuessedCorrectly.jpg)
+
+When the user guesses the word correctly, it will show the word in full and the message of congratulations! 
+
 
 
 Correct input and validation: 

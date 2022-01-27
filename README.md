@@ -108,7 +108,7 @@ All errors were fixed except for in the Gitpod.yml
 *Problems
 ![Problems](/assets/images/Problems.jpg)
 
-I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
+I had spoken with tutor support about these errors and was assured this would not affect my project or the app itself. 
 
 PIP8 was used and confirmed all was correct with the code. 
 *PEP8Valid

@@ -18,7 +18,8 @@ class Hangman:
     incorrect_guesses = 0
     guessed_letters = []
 
-    print('Hello, to start press any key')
+    username = input("Enter your name to start: ")
+    print("Username is: " + username)
 
     def start_game(self):
         """
@@ -26,7 +27,7 @@ class Hangman:
         """
         print()
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-        print("Hang on, Man!")
+        print("Hang on, Man!\n")
         print("Guess letters to fill out the word--you have 6 attempts!")
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print()
@@ -36,7 +37,7 @@ class Hangman:
         while True:
             # Check if the game has already been lost
             if self.incorrect_guesses == 6:
-                print(f"You DIE! The word was '{self.word}' :D")
+                print(f"You DIE! The word was '{self.word}' :(")
                 break
 
             # Check if the game has already been won
@@ -88,7 +89,7 @@ class Hangman:
             print("         |       ")
             print("        / \\      ")
         elif self.incorrect_guesses == 5:
-            print("Only 1 wrong guess left!")
+            print("Only 1 guess left!")
             print("-----------------")
             print("         |       ")
             print("       \\ 0 /     ")
@@ -119,14 +120,12 @@ class Hangman:
         print(game_board)
         print()
 
-    """
     def prompt_user(self):
         # Ask the user to guess a letter
         """
-        # Method to prompt the user to guess a letter, and process the input.
+        Method to prompt the user to guess a letter, and process the input.
         """
         letter = input('Guess a letter: ')
-    """
 
         if len(letter) > 1 or (not letter.isalpha()):
             print("Invalid input! Try again.")

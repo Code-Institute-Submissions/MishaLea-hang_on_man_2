@@ -78,7 +78,7 @@ the chances left – only when a valid letter has been submitted wrongly, will t
 Similarly, if the user inouts a letter more than once, the computer will generate a message advising the 
 letter has already been guessed.  
 
-Solved errors and bugs/errors unresolved: 
+## Solved errors and bugs/errors unresolved: 
 
 There were several minor errors including whitespaces, extra lines and an error message detailing 
 the variable was not entered correctly using UPPERCASE characters. 

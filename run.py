@@ -18,8 +18,9 @@ class Hangman:
     incorrect_guesses = 0
     guessed_letters = []
 
+    print('Hello, to start press any key')
     username = input("Enter your name to start: ")
-    print("Username is: " + username)
+    print(f"Username is: {input}")
 
     def start_game(self):
         """

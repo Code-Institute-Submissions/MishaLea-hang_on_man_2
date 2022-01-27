@@ -1,6 +1,6 @@
 """
-Random library imported for word choosing random
-word from below list by random.
+    Random library imported for word choosing random
+    word from below list by random.
 """
 import random
 
@@ -8,15 +8,23 @@ WORDBANK = ['tree', 'sun', 'ball', 'moon', 'earth', 'grass', 'world',
             'advert', 'octodont', 'pharos', 'physics', 'reality',
             'possession', 'cousin', 'aspect', 'analyst']
 
+
 class Hangman:
+    """
+        Class used to create the objects that are included in the below
+        variables and functions.
+    """
     word = ""
     incorrect_guesses = 0
     guessed_letters = []
 
-    """
-    Method to start the game.
-    """
+    username = input("Enter your name to start: ")
+    print("Username is: " + username)
+
     def start_game(self):
+        """
+            Method to start the game.
+        """
         print()
         print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
         print("Hang on, Man!")
@@ -49,33 +57,33 @@ class Hangman:
             self.display_game_board()
             self.prompt_user()
 
-    """
-    Method to display the hanging man, representing wrong guesses.
-    """
     def display_hangman(self):
+        """
+        Method to display the hanging man representing wrong guesses.
+        """
         print()
         print()
         if self.incorrect_guesses == 0:
-            print("6 wrong guesses left")
+            print("6 guesses allowed")
             print("-----------------")
             return
         elif self.incorrect_guesses == 1:
-            print("5 wrong guesses left")
+            print("5 guesses left")
             print("-----------------")
             print("         0       ")
         elif self.incorrect_guesses == 2:
-            print("4 wrong guesses left")
+            print("4 guesses left")
             print("-----------------")
             print("         0       ")
             print("         |       ")
         elif self.incorrect_guesses == 3:
-            print("3 wrong guesses left")
+            print("3 guesses left")
             print("-----------------")
             print("         0       ")
             print("         |       ")
             print("        / \\      ")
         elif self.incorrect_guesses == 4:
-            print("2 wrong guesses left")
+            print("2 guesses left")
             print("-----------------")
             print("       \\ 0 /     ")
             print("         |       ")
@@ -97,10 +105,10 @@ class Hangman:
         print()
         print()
 
-    """
-    Method to display blank spaces and guessed letters.
-    """
     def display_game_board(self):
+        """
+        Method to display blank spaces and guessed letters.
+        """
         # Build the current guessed word
         game_board = ""
         for character in self.word:
@@ -112,11 +120,11 @@ class Hangman:
         print(game_board)
         print()
 
-    """
-    Method to prompt the user to guess a letter, and process the input.
-    """
     def prompt_user(self):
         # Ask the user to guess a letter
+        """
+        Method to prompt the user to guess a letter, and process the input.
+        """
         letter = input('Guess a letter: ')
 
         if len(letter) > 1 or (not letter.isalpha()):

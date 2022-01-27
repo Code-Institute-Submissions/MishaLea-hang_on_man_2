@@ -39,7 +39,7 @@ def main():
             while True:
                 # Check if the game has already been lost
                 if self.incorrect_guesses == 6:
-                    print(f"You DIE! The word was '{self.word}' :(")
+                    print(f"You DIED! The word was '{self.word}' :(")
                     break
 
                     # Check if the game has already been won

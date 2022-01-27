@@ -62,8 +62,8 @@ There were several minor errors including whitespaces, extra lines and an error 
 the variable was not entered correctly using UPPERCASE characters. 
 All errors were fixed except for in the Gitpod.yml
 
-*Problemsgitpod
-![Problemsgitpod](/assets/images/Problemsgitpod.jpg)
+*Problems
+![Problems](/assets/images/Problems.jpg)
 
 I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
 

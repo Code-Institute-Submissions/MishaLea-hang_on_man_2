@@ -97,7 +97,8 @@ def main():
                 print("       \\ 0 /     ")
                 print("         |       ")
                 print("        / \\      ")
-            else:
+            elif self.incorrect_guesses == 6:
+                print("You Died! Better luck next time!")
                 print("------------------")
                 print("        _|_      ")
                 print("         |       ")

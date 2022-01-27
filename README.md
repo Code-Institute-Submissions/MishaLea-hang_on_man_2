@@ -65,7 +65,8 @@ All errors were fixed except for in the Gitpod.yml
 I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
 
 PIP8 was used and confirmed all was correct with the code. 
-![/workspace/hang_on_man_2/PEP8 - Valid.jpg]
+*PEP8Valid
+![PEP8Valid](/assets/images/PEP8Valid.jpg)
 
 
 References/ Acknowledgements:

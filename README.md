@@ -61,7 +61,10 @@ Solved errors and bugs/errors unresolved:
 There were several minor errors including whitespaces, extra lines and an error message detailing 
 the variable was not entered correctly using UPPERCASE characters. 
 All errors were fixed except for in the Gitpod.yml
-(image)
+
+*Problemsgitpod.yml
+![Problemsgitpod](/assets/images/Problemsgitpod.yml.jpg)
+
 I had spoken with tutpr support about these errors and was assured this would not affect my project or the app itself. 
 
 PIP8 was used and confirmed all was correct with the code. 

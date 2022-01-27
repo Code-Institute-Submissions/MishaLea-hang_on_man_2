@@ -30,23 +30,45 @@ As a User
 To create this I intend on keeping content/words brief
 . 
 -	The rules need to be clear with the number of tries showing after each letter is guessed. 
--	An option to play again after each word is guessed right/wrong
 -	After a set number of words has been guessed right/wrong, the results showing 
 final wins/losses would be interesting to see. 
 ## Features to include: 
 -	Graphics of hangman if user gets a guess wrong during each round. 
--	Hint if down to 4/5 attempts that’s only available by swapping a life for a hint. 
 -	Computer informs user each time they guess right or wrong. If correct, the letter will be added. 
 If wrong, a section of hangman to be shown. 
--	User should enter name to start and before initial guess, computer will welcome the user to the game. 
-At end of round, computer will have a congrats message or a condolences messages with an option to play again. 
+At end of round, computer will have a congrats message or a condolences messages.
 
-Graphics included: 
+
+## Graphics included: 
 As previously discussed, a simple hangman design will be added each time a letter is guessed incorrectly – 
-this has been added directly into the python code through an if/else statement based on the number of turns taken. 
+this has been added directly into the python code through an if/elif/else statement based on the number of turns taken. 
 
 Each round will show ‘_’ underscores based on how many letters are in the randomly chosen word. When a letter is 
-guessed correctly, this will be added in the correct space.  
+guessed correctly, this will be added in the correct space. 
+
+*IntroScreen
+![IntroScreen](/assets/images/IntroScreen.jpg)
+
+The above image shows the command line promting the user to enter a letter with a brief description on 
+the game and how many lives they have in total. Followed 
+
+*Correctanswer
+![Correctanswer](/assets/images/Correctanswer.jpg)
+
+*IncorrectGuess
+![IncorrectGuess](/assets/images/IncorrectGuess.jpg)
+
+*Letterguessedalready
+![Letterguessedalready](/assets/images/Letterguessedalready.jpg)
+
+*invalidinput
+![invalidinput](/assets/images/invalidinput.jpg)
+
+*roundlost
+![roundlost](/assets/images/roundlost.jpg)
+
+*WordGuessedCorrectly
+![WordGuessedCorrectly](/assets/images/WordGuessedCorrectly.jpg)
 
 
 Correct input and validation: 

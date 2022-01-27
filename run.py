@@ -18,9 +18,6 @@ class Hangman:
     incorrect_guesses = 0
     guessed_letters = []
 
-    # username = input("Enter your name to start: ")
-    # print("Username is: " + username)
-
     def start_game(self):
         """
             Method to start the game.
